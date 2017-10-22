@@ -1,0 +1,58 @@
+USE [Registraion]
+GO
+
+/****** Object:  StoredProcedure [dbo].[insertregistraion]    Script Date: 10/22/2017 2:23:34 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Naushad>
+-- Create date: <10/17/2017>
+-- Description:	<Insert>
+-- =============================================
+CREATE PROCEDURE [dbo].[insertregistraion]
+	@firstname	varchar(50)	,
+	@lastname	varchar(50)	,
+	@emailid	varchar(30)	,
+	@mobileno	varchar(20)	,
+	@gender		varchar(10)	,
+	@country	int			,
+	@state		int			,
+	@hobbies	varchar(20)	,
+	@images		varchar(MAX)
+AS
+BEGIN
+	 SET NOCOUNT ON;
+
+    -- Insert procedure
+	INSERT INTO Registraion
+	(
+	firstname	,
+	lastname	,
+	emailid		,
+	mobileno	,
+	gender		,
+	country		,
+	state		,
+	hobbies		,
+	images		
+	)
+	values
+	(
+	@firstname	,
+	@lastname	,
+	@emailid	,
+	@mobileno	,
+	@gender		,
+	@country	,
+	@state		,
+	@hobbies	,
+	@images		
+	)
+END
+
+GO
+
