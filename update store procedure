@@ -1,0 +1,48 @@
+USE [Registraion]
+GO
+
+/****** Object:  StoredProcedure [dbo].[updateregistraion]    Script Date: 10/22/2017 2:23:59 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Naushad>
+-- Create date: <10/17/2017>
+-- Description:	<Update Store Procedure>
+-- =============================================
+CREATE PROCEDURE [dbo].[updateregistraion]
+	@RegistraionID	int	         ,        
+	@firstname		varchar(50)	 ,
+	@lastname		varchar(50)	 ,
+	@emailid		varchar(30)	 ,
+	@mobileno	    varchar(20)	 ,
+	@gender			varchar(10)	 ,
+	@country		int			 ,
+	@state			int			 ,
+	@hobbies		varchar(20)	 ,
+	@images			varchar(MAX)  
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    -- Update Procedure
+	UPDATE Registraion SET
+	firstname		=@firstname		,
+	lastname		=@lastname		,
+	emailid			=@emailid		,
+	mobileno	    =@mobileno	    ,
+	gender			=@gender		,	
+	country			=@country		,
+	state			=@state			,
+	hobbies			=@hobbies		,
+	images			=@images		
+	WHERE RegistraionID=@RegistraionID	
+	
+END
+
+GO
+
