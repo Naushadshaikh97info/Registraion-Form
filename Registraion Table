@@ -1,0 +1,35 @@
+USE [Registraion]
+GO
+
+/****** Object:  Table [dbo].[Registraion]    Script Date: 10/22/2017 2:21:42 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Registraion](
+	[RegistraionID] [int] IDENTITY(1,1) NOT NULL,
+	[firstname] [varchar](50) NULL,
+	[lastname] [varchar](50) NULL,
+	[emailid] [varchar](30) NULL,
+	[mobileno] [varchar](20) NULL,
+	[gender] [varchar](10) NULL,
+	[country] [int] NULL,
+	[state] [int] NULL,
+	[hobbies] [varchar](20) NULL,
+	[images] [varchar](max) NULL,
+ CONSTRAINT [PK_Registraion] PRIMARY KEY CLUSTERED 
+(
+	[RegistraionID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
