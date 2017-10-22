@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Registraion" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLExpress;Initial Catalog=Registraion;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RegistraionConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Registraion" Member="Registraions">
+    <Type Name="Registraion">
+      <Column Name="RegistraionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lastname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="emailid" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="mobileno" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="country" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hobbies" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="images" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.country" Member="countries">
+    <Type Name="country">
+      <Column Name="countryid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="countryname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.state" Member="states">
+    <Type Name="state">
+      <Column Name="stateid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="statename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.deleteregistraion" Method="deleteregistraion">
+    <Parameter Name="RegistraionID" Parameter="registraionID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertregistraion" Method="insertregistraion">
+    <Parameter Name="firstname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="lastname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="emailid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="mobileno" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="country" Type="System.Int32" DbType="Int" />
+    <Parameter Name="state" Type="System.Int32" DbType="Int" />
+    <Parameter Name="hobbies" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="images" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateregistraion" Method="updateregistraion">
+    <Parameter Name="RegistraionID" Parameter="registraionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="firstname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="lastname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="emailid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="mobileno" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="country" Type="System.Int32" DbType="Int" />
+    <Parameter Name="state" Type="System.Int32" DbType="Int" />
+    <Parameter Name="hobbies" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="images" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
