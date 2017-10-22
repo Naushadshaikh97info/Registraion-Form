@@ -1,0 +1,30 @@
+USE [Registraion]
+GO
+
+/****** Object:  StoredProcedure [dbo].[deleteregistraion]    Script Date: 10/22/2017 2:23:03 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Naushad>
+-- Create date: <10/17/2017>
+-- Description:	<Delete>
+-- =============================================
+CREATE PROCEDURE [dbo].[deleteregistraion] 
+	@RegistraionID	  int	      
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+    -- Delete Store Procedure 
+
+	DELETE FROM Registraion 
+	WHERE RegistraionID=@RegistraionID
+	
+END
+
+GO
+
