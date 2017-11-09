@@ -1,1 +1,7 @@
 http://www.c-sharpcorner.com/article/creating-simple-cascading-dropdownlist-in-mvc/
+
+
+ <add name="StudentEntities" connectionString="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\sqlexpress;initial catalog=Student;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+    <add name="StudentConnectionString" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Student;Persist Security Info=True;MultipleActiveResultSets=True;Application Name=EntityFramework;Trusted_Connection=True;" providerName="System.Data.SqlClient" />
+
+
